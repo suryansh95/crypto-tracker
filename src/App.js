@@ -25,28 +25,17 @@ function App() {
 
 const classes = useStyles();
 
+ return (
 
-
-  return (
  <Router>
-   
    <div className={classes.App}>
-
-    <Header  />
+<Header  />
    <Switch>
-
-    <Route exact path = "/" component={Homepage}/> 
-  
-    <Route exact path = "/coins/:id" component={CoinPage} />
-       
-  </Switch>
+   <Route exact path = "/" component={Homepage}/> 
+   <Route exact path = "/coins/:id" component={CoinPage} />
+   </Switch>
    </div>
-
-
-
-
-  
- </Router>
+</Router>
   );
 }
 

@@ -1,9 +1,7 @@
-
 import React, { useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Pagination from "@material-ui/lab/Pagination";
 import {
-  
   Container,
   createTheme,
   TableCell,
@@ -17,7 +15,6 @@ import {
   TableContainer,
   Table,
   Paper,
- 
 } from "@material-ui/core";
 import axios from "axios";
 import { CoinList } from "../../config/api";
@@ -54,7 +51,6 @@ export default function CoinsTable() {
 
   const classes = useStyles();
   const history = useHistory();
-
   const darkTheme = createTheme({
     palette: {
       primary: {
@@ -68,7 +64,6 @@ export default function CoinsTable() {
     setLoading(true);
     const { data } = await axios.get(CoinList(currency));
     console.log(data);
-
     setCoins(data);
     setLoading(false);
   };
